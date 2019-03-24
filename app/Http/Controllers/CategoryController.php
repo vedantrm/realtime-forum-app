@@ -56,7 +56,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $category->update([
-            'name' => $request->name, 
+            'name' => $request->name,
             'slug' => str_slug($request->name)
         ]);
         return response('Updated', Response::HTTP_ACCEPTED);
