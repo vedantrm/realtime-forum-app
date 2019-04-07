@@ -4,7 +4,7 @@ class Token {
         const payload = this.payload(token);
 
         if(payload) {
-            return payload.iss == "http://forum.local/api/auth/login" ? true : false
+            return payload.iss == "http://forum.local/api/auth/login" || "http://forum.local/api/auth/signup" ? true : false
         }
         return false
     }
